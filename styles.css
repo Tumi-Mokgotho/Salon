@@ -61,25 +61,19 @@ body {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 20px;
 }
 
-/* Extra padding for very small phones */
+/* Mobile specific container padding - MORE SPACE */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
 @media (max-width: 480px) {
   .container {
-    padding: 0 1.25rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    padding: 0 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    padding: 0 2.5rem;
+    padding: 0 20px;
   }
 }
 
@@ -99,49 +93,44 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 0;
-  gap: 0.75rem;
-}
-
-@media (min-width: 480px) {
-  .nav-inner {
-    gap: 1rem;
-  }
+  padding: 12px 0;
+  gap: 12px;
 }
 
 @media (min-width: 768px) {
   .nav-inner {
-    padding: 1rem 0;
+    padding: 16px 0;
+    gap: 24px;
   }
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
   text-decoration: none;
   flex-shrink: 0;
 }
 
 .logo-icon {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 24px;
+  height: 24px;
   color: var(--pink-primary);
   stroke-width: 1.5;
 }
 
 @media (min-width: 768px) {
   .logo-icon {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 28px;
+    height: 28px;
   }
 }
 
 .logo-text {
   font-family: var(--font-display);
-  font-size: 0.85rem;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   background: linear-gradient(135deg, #2d2d2d 30%, var(--pink-primary) 80%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -150,14 +139,13 @@ body {
 
 @media (min-width: 480px) {
   .logo-text {
-    font-size: 0.95rem;
-    letter-spacing: 0.05em;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 768px) {
   .logo-text {
-    font-size: 1.4rem;
+    font-size: 22px;
     letter-spacing: 0.08em;
   }
 }
@@ -169,7 +157,7 @@ body {
 
 .nav-links {
   display: none;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 @media (min-width: 768px) {
@@ -181,12 +169,12 @@ body {
 .nav-link {
   color: var(--text-soft);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.05em;
   transition: var(--transition-smooth);
   position: relative;
-  padding: 0.5rem 0;
+  padding: 8px 0;
 }
 
 .nav-link::after {
@@ -213,9 +201,9 @@ body {
   color: white;
   border: none;
   border-radius: 40px;
-  padding: 0.5rem 1rem;
+  padding: 10px 20px;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 13px;
   cursor: pointer;
   transition: var(--transition-smooth);
   letter-spacing: 0.02em;
@@ -224,8 +212,8 @@ body {
 
 @media (min-width: 768px) {
   .btn-primary {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.85rem;
+    padding: 12px 28px;
+    font-size: 14px;
   }
 }
 
@@ -243,10 +231,10 @@ body {
   background: transparent;
   border: 1.5px solid var(--border-pink);
   border-radius: 40px;
-  padding: 0.5rem 1rem;
+  padding: 10px 20px;
   color: var(--text-dark);
   font-weight: 500;
-  font-size: 0.75rem;
+  font-size: 13px;
   cursor: pointer;
   transition: var(--transition-smooth);
   text-decoration: none;
@@ -257,8 +245,8 @@ body {
 
 @media (min-width: 768px) {
   .btn-outline {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.85rem;
+    padding: 12px 28px;
+    font-size: 14px;
   }
 }
 
@@ -270,14 +258,14 @@ body {
 }
 
 .btn-large {
-  padding: 0.7rem 1.2rem;
-  font-size: 0.85rem;
+  padding: 12px 24px;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
   .btn-large {
-    padding: 0.9rem 2rem;
-    font-size: 1rem;
+    padding: 14px 32px;
+    font-size: 16px;
   }
 }
 
@@ -312,42 +300,42 @@ body {
 
 .hero-content {
   position: relative;
-  padding: 3rem 0;
+  padding: 60px 0;
   z-index: 2;
   width: 100%;
 }
 
 @media (min-width: 640px) {
   .hero-content {
-    padding: 4rem 0;
+    padding: 80px 0;
   }
 }
 
 @media (min-width: 768px) {
   .hero-content {
-    padding: 6rem 0;
+    padding: 100px 0;
   }
 }
 
 .hero-badge {
-  font-size: 0.6rem;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--pink-primary);
   font-weight: 600;
-  margin-bottom: 0.8rem;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 768px) {
   .hero-badge {
-    font-size: 0.75rem;
+    font-size: 12px;
     letter-spacing: 0.3em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
   }
 }
 
 .hero-title {
-  font-size: 1.8rem;
+  font-size: 36px;
   line-height: 1.2;
   max-width: 100%;
   font-family: var(--font-display);
@@ -357,26 +345,26 @@ body {
 
 @media (min-width: 480px) {
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 42px;
   }
 }
 
 @media (min-width: 640px) {
   .hero-title {
-    font-size: 3rem;
+    font-size: 52px;
   }
 }
 
 @media (min-width: 768px) {
   .hero-title {
-    font-size: 4rem;
+    font-size: 64px;
     max-width: 800px;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-title {
-    font-size: 5rem;
+    font-size: 80px;
   }
 }
 
@@ -386,45 +374,44 @@ body {
 }
 
 .hero-desc {
-  margin-top: 1rem;
+  margin-top: 20px;
   max-width: 100%;
-  font-size: 0.85rem;
+  font-size: 15px;
   color: var(--text-soft);
   line-height: 1.5;
 }
 
 @media (min-width: 640px) {
   .hero-desc {
-    font-size: 1rem;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 768px) {
   .hero-desc {
-    margin-top: 1.5rem;
+    margin-top: 24px;
     max-width: 550px;
-    font-size: 1.125rem;
+    font-size: 18px;
   }
 }
 
 .hero-buttons {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  margin-top: 1.5rem;
+  gap: 12px;
+  margin-top: 28px;
 }
 
 @media (min-width: 480px) {
   .hero-buttons {
     flex-direction: row;
-    flex-wrap: wrap;
+    gap: 16px;
   }
 }
 
 @media (min-width: 768px) {
   .hero-buttons {
-    gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 32px;
   }
 }
 
@@ -443,34 +430,34 @@ body {
 
 /* Section Headers */
 .section-pad {
-  padding: 2.5rem 0;
+  padding: 48px 0;
 }
 
 @media (min-width: 640px) {
   .section-pad {
-    padding: 3rem 0;
+    padding: 60px 0;
   }
 }
 
 @media (min-width: 768px) {
   .section-pad {
-    padding: 5rem 0;
+    padding: 80px 0;
   }
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 32px;
 }
 
 @media (min-width: 768px) {
   .section-header {
-    margin-bottom: 3rem;
+    margin-bottom: 48px;
   }
 }
 
 .section-tag {
-  font-size: 0.6rem;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--pink-primary);
@@ -479,29 +466,28 @@ body {
 
 @media (min-width: 768px) {
   .section-tag {
-    font-size: 0.7rem;
+    font-size: 12px;
     letter-spacing: 0.3em;
   }
 }
 
 .section-title {
-  font-size: 1.6rem;
-  margin-top: 0.5rem;
+  font-size: 32px;
+  margin-top: 12px;
   font-family: var(--font-display);
   font-weight: 600;
   color: var(--text-dark);
-  padding: 0 0.5rem;
 }
 
 @media (min-width: 640px) {
   .section-title {
-    font-size: 2rem;
+    font-size: 40px;
   }
 }
 
 @media (min-width: 768px) {
   .section-title {
-    font-size: 3rem;
+    font-size: 48px;
   }
 }
 
@@ -509,13 +495,13 @@ body {
   width: 50px;
   height: 2px;
   background: var(--pink-primary);
-  margin: 0.8rem auto 0;
+  margin: 16px auto 0;
 }
 
 @media (min-width: 768px) {
   .section-divider {
     width: 60px;
-    margin: 1rem auto 0;
+    margin: 20px auto 0;
   }
 }
 
@@ -523,35 +509,35 @@ body {
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 @media (min-width: 480px) {
   .services-grid {
-    gap: 1.25rem;
+    gap: 24px;
   }
 }
 
 @media (min-width: 640px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+    gap: 24px;
   }
 }
 
 @media (min-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 28px;
   }
 }
 
 .service-card {
   background: var(--bg-card);
   border: 1px solid var(--border-light);
-  border-radius: 16px;
-  padding: 1rem;
+  border-radius: 20px;
+  padding: 20px;
   transition: var(--transition-smooth);
   position: relative;
   overflow: hidden;
@@ -559,14 +545,14 @@ body {
 
 @media (min-width: 640px) {
   .service-card {
-    padding: 1.2rem;
+    padding: 24px;
   }
 }
 
 @media (min-width: 768px) {
   .service-card {
-    border-radius: 20px;
-    padding: 1.5rem;
+    border-radius: 24px;
+    padding: 28px;
   }
 }
 
@@ -596,82 +582,83 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: 12px;
   flex-wrap: wrap;
+  margin-bottom: 8px;
 }
 
 .service-name {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 600;
   color: var(--text-dark);
 }
 
 @media (min-width: 640px) {
   .service-name {
-    font-size: 1.1rem;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 768px) {
   .service-name {
-    font-size: 1.4rem;
+    font-size: 24px;
   }
 }
 
 .service-price {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 20px;
   color: var(--pink-primary);
   font-weight: 600;
 }
 
 @media (min-width: 768px) {
   .service-price {
-    font-size: 1.6rem;
+    font-size: 28px;
   }
 }
 
 .service-desc {
-  margin-top: 0.5rem;
-  font-size: 0.7rem;
+  margin-top: 8px;
+  font-size: 13px;
   color: var(--text-muted);
   line-height: 1.4;
 }
 
 @media (min-width: 768px) {
   .service-desc {
-    margin-top: 0.8rem;
-    font-size: 0.85rem;
+    margin-top: 12px;
+    font-size: 14px;
   }
 }
 
 .service-footer {
-  margin-top: 0.8rem;
+  margin-top: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 12px;
 }
 
 @media (min-width: 768px) {
   .service-footer {
-    margin-top: 1.5rem;
+    margin-top: 24px;
   }
 }
 
 .duration-badge {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
-  font-size: 0.6rem;
+  gap: 6px;
+  font-size: 12px;
   color: var(--text-muted);
 }
 
 @media (min-width: 768px) {
   .duration-badge {
-    font-size: 0.75rem;
+    font-size: 13px;
   }
 }
 
@@ -681,10 +668,10 @@ body {
   color: var(--pink-primary);
   font-weight: 600;
   cursor: pointer;
-  font-size: 0.7rem;
+  font-size: 13px;
   transition: var(--transition-smooth);
-  padding: 0.5rem 0.75rem;
-  border-radius: 20px;
+  padding: 8px 16px;
+  border-radius: 30px;
 }
 
 .book-link:active {
@@ -693,7 +680,7 @@ body {
 
 @media (min-width: 768px) {
   .book-link {
-    font-size: 0.85rem;
+    font-size: 14px;
     padding: 0;
   }
 }
@@ -707,69 +694,68 @@ body {
 .visit-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 32px;
 }
 
 @media (min-width: 768px) {
   .visit-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 48px;
   }
 }
 
 .visit-desc {
-  margin-top: 0.8rem;
+  margin-top: 16px;
   color: var(--text-soft);
   line-height: 1.5;
-  font-size: 0.85rem;
+  font-size: 15px;
 }
 
 @media (min-width: 768px) {
   .visit-desc {
-    margin-top: 1rem;
-    font-size: 1rem;
+    margin-top: 20px;
+    font-size: 16px;
   }
 }
 
 .info-list {
-  margin-top: 1.5rem;
+  margin-top: 24px;
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 16px;
 }
 
 @media (min-width: 768px) {
   .info-list {
-    margin-top: 2rem;
-    gap: 1rem;
+    margin-top: 32px;
+    gap: 20px;
   }
 }
 
 .info-item {
   display: flex;
-  gap: 0.7rem;
+  gap: 12px;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 14px;
   color: var(--text-soft);
-  flex-wrap: wrap;
 }
 
 @media (min-width: 768px) {
   .info-item {
-    font-size: 0.9rem;
+    font-size: 15px;
   }
 }
 
 .info-icon {
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   color: var(--pink-primary);
   flex-shrink: 0;
 }
 
 .visit-book-btn {
-  margin-top: 1.5rem;
+  margin-top: 28px;
   width: 100%;
   text-align: center;
 }
@@ -777,22 +763,22 @@ body {
 @media (min-width: 480px) {
   .visit-book-btn {
     width: auto;
-    min-width: 200px;
+    min-width: 220px;
   }
 }
 
 .hours-card {
   background: var(--bg-card);
   border: 1px solid var(--border-light);
-  border-radius: 20px;
-  padding: 1.2rem;
+  border-radius: 24px;
+  padding: 24px;
   transition: var(--transition-smooth);
 }
 
 @media (min-width: 768px) {
   .hours-card {
-    border-radius: 24px;
-    padding: 1.8rem;
+    border-radius: 28px;
+    padding: 32px;
   }
 }
 
@@ -803,19 +789,19 @@ body {
 
 .hours-title {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 24px;
   font-weight: 600;
   color: var(--text-dark);
 }
 
 @media (min-width: 768px) {
   .hours-title {
-    font-size: 1.8rem;
+    font-size: 28px;
   }
 }
 
 .hours-list {
-  margin-top: 1rem;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -823,23 +809,21 @@ body {
 .hours-row {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0;
+  padding: 12px 0;
   border-bottom: 1px solid var(--border-light);
-  font-size: 0.75rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  font-size: 14px;
 }
 
 @media (min-width: 640px) {
   .hours-row {
-    font-size: 0.8rem;
+    font-size: 15px;
   }
 }
 
 @media (min-width: 768px) {
   .hours-row {
-    padding: 0.8rem 0;
-    font-size: 0.9rem;
+    padding: 14px 0;
+    font-size: 16px;
   }
 }
 
@@ -855,14 +839,14 @@ body {
 /* Footer */
 .footer {
   border-top: 1px solid var(--border-pink);
-  padding: 1.5rem 0;
-  margin-top: 1rem;
+  padding: 24px 0;
+  margin-top: 20px;
 }
 
 @media (min-width: 768px) {
   .footer {
-    padding: 2rem 0;
-    margin-top: 2rem;
+    padding: 32px 0;
+    margin-top: 40px;
   }
 }
 
@@ -871,7 +855,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
   text-align: center;
 }
 
@@ -884,23 +868,23 @@ body {
 
 .footer-inner p {
   color: var(--text-muted);
-  font-size: 0.7rem;
+  font-size: 12px;
 }
 
 @media (min-width: 768px) {
   .footer-inner p {
-    font-size: 0.875rem;
+    font-size: 14px;
   }
 }
 
 .footer-social {
   display: flex;
-  gap: 1rem;
+  gap: 20px;
 }
 
 .social-icon {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 20px;
+  height: 20px;
   color: var(--text-muted);
   cursor: pointer;
   transition: var(--transition-smooth);
@@ -929,7 +913,7 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s, visibility 0.3s;
-  padding: 1rem;
+  padding: 20px;
 }
 
 .modal-backdrop.active {
@@ -940,23 +924,17 @@ body {
 .modal-container {
   background: var(--bg-elevated);
   border: 1px solid var(--pink-primary);
-  border-radius: 20px;
+  border-radius: 28px;
   width: 100%;
-  max-width: 95%;
+  max-width: 500px;
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: var(--shadow-xl);
 }
 
-@media (min-width: 480px) {
+@media (max-width: 480px) {
   .modal-container {
-    max-width: 450px;
-  }
-}
-
-@media (min-width: 640px) {
-  .modal-container {
-    max-width: 500px;
+    max-width: 100%;
     border-radius: 24px;
   }
 }
@@ -965,7 +943,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 20px;
   border-bottom: 1px solid var(--border-pink);
   position: sticky;
   top: 0;
@@ -975,20 +953,20 @@ body {
 
 @media (min-width: 768px) {
   .modal-header {
-    padding: 1.2rem 1.5rem;
+    padding: 24px;
   }
 }
 
 .modal-title {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 20px;
   font-weight: 600;
   color: var(--pink-primary);
 }
 
 @media (min-width: 768px) {
   .modal-title {
-    font-size: 1.6rem;
+    font-size: 24px;
   }
 }
 
@@ -997,9 +975,9 @@ body {
   border: none;
   color: var(--text-muted);
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 22px;
   transition: var(--transition-smooth);
-  padding: 0.5rem;
+  padding: 8px;
   line-height: 1;
 }
 
@@ -1014,39 +992,39 @@ body {
 }
 
 .modal-body {
-  padding: 1rem;
+  padding: 20px;
 }
 
 @media (min-width: 768px) {
   .modal-body {
-    padding: 1.5rem;
+    padding: 28px;
   }
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
   .form-group {
-    margin-bottom: 1.2rem;
+    margin-bottom: 24px;
   }
 }
 
 label {
   display: block;
-  font-size: 0.6rem;
+  font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-muted);
-  margin-bottom: 0.3rem;
+  margin-bottom: 8px;
 }
 
 @media (min-width: 768px) {
   label {
-    font-size: 0.7rem;
-    margin-bottom: 0.4rem;
+    font-size: 12px;
+    margin-bottom: 10px;
   }
 }
 
@@ -1054,10 +1032,10 @@ input, select {
   width: 100%;
   background: var(--bg-surface);
   border: 1px solid var(--border-light);
-  border-radius: 10px;
-  padding: 0.7rem 0.8rem;
+  border-radius: 14px;
+  padding: 14px 16px;
   color: var(--text-dark);
-  font-size: 0.85rem;
+  font-size: 15px;
   transition: var(--transition-smooth);
   -webkit-appearance: none;
   appearance: none;
@@ -1065,9 +1043,9 @@ input, select {
 
 @media (min-width: 768px) {
   input, select {
-    border-radius: 12px;
-    padding: 0.7rem 1rem;
-    font-size: 0.9rem;
+    border-radius: 16px;
+    padding: 14px 18px;
+    font-size: 16px;
   }
 }
 
@@ -1079,12 +1057,12 @@ input:focus, select:focus {
 .time-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  gap: 10px;
 }
 
 @media (min-width: 480px) {
   .time-grid {
-    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
   }
 }
 
@@ -1097,9 +1075,9 @@ input:focus, select:focus {
 .time-slot {
   background: var(--bg-surface);
   border: 1px solid var(--border-light);
-  border-radius: 10px;
-  padding: 0.6rem 0;
-  font-size: 0.75rem;
+  border-radius: 14px;
+  padding: 12px 0;
+  font-size: 14px;
   text-align: center;
   cursor: pointer;
   transition: var(--transition-smooth);
@@ -1113,9 +1091,9 @@ input:focus, select:focus {
 
 @media (min-width: 768px) {
   .time-slot {
-    border-radius: 12px;
-    padding: 0.7rem 0;
-    font-size: 0.8rem;
+    border-radius: 16px;
+    padding: 14px 0;
+    font-size: 15px;
   }
 }
 
@@ -1134,55 +1112,55 @@ input:focus, select:focus {
 .flex-row-2 {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.8rem;
+  gap: 16px;
 }
 
 @media (min-width: 480px) {
   .flex-row-2 {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 20px;
   }
 }
 
 .btn-full {
   width: 100%;
-  padding: 0.8rem;
-  border-radius: 40px;
+  padding: 16px;
+  border-radius: 50px;
   font-weight: 600;
-  font-size: 0.9rem;
-  margin-top: 1rem;
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 @media (min-width: 768px) {
   .btn-full {
-    padding: 0.8rem;
-    font-size: 1rem;
-    margin-top: 1rem;
+    padding: 16px;
+    font-size: 16px;
+    margin-top: 24px;
   }
 }
 
 .success-state {
   text-align: center;
-  padding: 1rem 0;
+  padding: 24px 0;
 }
 
 @media (min-width: 768px) {
   .success-state {
-    padding: 1.5rem 0;
+    padding: 32px 0;
   }
 }
 
 .check-icon {
-  width: 3rem;
-  height: 3rem;
+  width: 56px;
+  height: 56px;
   color: var(--pink-primary);
-  margin: 0 auto 1rem;
+  margin: 0 auto 20px;
 }
 
 @media (min-width: 768px) {
   .check-icon {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 64px;
+    height: 64px;
   }
 }
 
@@ -1195,16 +1173,16 @@ input:focus, select:focus {
   .time-slot,
   .modal-close {
     cursor: pointer;
-    min-height: 44px;
+    min-height: 48px;
   }
 
   .book-link {
     min-height: auto;
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
   }
 
   .time-slot {
-    min-height: 44px;
+    min-height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1222,33 +1200,57 @@ input:focus, select:focus {
   }
 
   .hero-content {
-    padding: 2rem 0;
+    padding: 40px 0;
   }
 
   .services-grid {
-    gap: 0.8rem;
+    gap: 16px;
   }
 }
 
-/* Small phone adjustments */
-@media (max-width: 380px) {
+/* Small phone adjustments - EXTRA BREATHING ROOM */
+@media (max-width: 480px) {
   .container {
-    padding: 0 1rem;
+    padding: 0 20px;
   }
-
+  
   .hero-title {
-    font-size: 1.5rem;
+    font-size: 32px;
   }
 
   .section-title {
-    font-size: 1.3rem;
+    font-size: 28px;
   }
 
+  .service-card {
+    padding: 16px;
+  }
+  
   .service-name {
-    font-size: 0.85rem;
+    font-size: 16px;
   }
 
   .service-price {
-    font-size: 0.95rem;
+    font-size: 18px;
+  }
+  
+  .hours-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .hero-title {
+    font-size: 28px;
+  }
+  
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-outline {
+    font-size: 13px;
+    padding: 10px 16px;
   }
 }
